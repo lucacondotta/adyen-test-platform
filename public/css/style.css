@@ -1,0 +1,32 @@
+body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+#configuration {
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+#payment-methods {
+    padding: 10px 0;
+}
+
+#payment-methods .payment-method {
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+}
+
+#payment-methods .payment-method .name {
+    font-weight: bold;
+    padding: 5px 0 10px;
+}

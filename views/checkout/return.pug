@@ -1,0 +1,21 @@
+extends ../layout/base
+
+block content
+    div(class="row")
+        div(class="col-4 offset-4")
+            div(class="card")
+                div(class="card-body")
+                    h5(class="card-title") Details
+                    div(class="row mt-5")
+                        div(class="col-6")
+                            h6 resultCode
+                        div(class="col-6")= resultCode
+                    div(class="row mt-2")
+                        div(class="col-6")
+                            h6 pspReference
+                        div(class="col-6")= pspReference
+                    div(class="row mt-5")
+                        div(class="col-12 text-center")
+                            a(href="/") Try another payment
+
+

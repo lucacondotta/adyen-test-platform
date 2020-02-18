@@ -1,0 +1,32 @@
+extends ../layout/base
+
+block content
+    h2= "Configuration"
+    div(id="configuration" class="mb-3")
+        form(class="form form-horizontal")
+            div(class="form-group row" id="shopper-id")
+                label(for="shopper-id-input" class="col-sm-2 col-form-label text-right") Shopper ID (shopperReference)
+                div(class="col-sm-9")
+                    input(id="shopper-id-input", class="form-control")
+                    div(class="invalid-feedback") Provide shopper ID
+            div(class="form-group row")
+                label(for="order-reference-input" class="col-sm-2 col-form-label text-right") Order reference (reference)
+                div(class="col-sm-9")
+                    input(id="order-reference-input", class="form-control")
+                    div(class="invalid-feedback") Provide order reference
+            div(class="form-group row")
+                label(for="amount-input" class="col-sm-2 col-form-label text-right") Amount
+                div(class="col-sm-9")
+                    input(id="amount-input", class="form-control")
+                    div(class="invalid-feedback") Provide amount
+            div(class="form-group row")
+                label(for="recurring-input" class="col-sm-2 form-check-label text-right") Recurring
+                div(class="col-sm-9 form check")
+                    input(id="recurring-input", type="checkbox" class="form-control")
+    h2= "Available payment methods"
+    div(id="payment-methods")
+    div(id="redirect-component")
+
+block before_body_ends
+    script(src="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/3.3.0/adyen.js")
+    script(src="/js/pages/index.js")
