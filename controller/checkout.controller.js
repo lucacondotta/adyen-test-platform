@@ -63,7 +63,7 @@ module.exports = (router) => {
   router.get('/checkout/process/return', async (req, res) => {
     const { resultCode, payload, orderId } = req.query;
 
-    if (resultCode === 'received') {
+    if (resultCode === 'authorised') {
       const order = await orderService.get(orderId);
       const options = {
         url: `${process.env.ADYEN_API_CHECKOUT_BASE_URL}/checkout/V${process.env.ADYEN_API_CHECKOUT_VERSION}/payments/details`,

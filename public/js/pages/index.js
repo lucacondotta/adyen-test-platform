@@ -69,6 +69,7 @@ const handleOnSubmit = (state, component) => {
         shopperReference,
         reference,
         shopperInteraction: recurring ? 'ContAuth' : 'Ecommerce',
+        storePaymentMethod: recurring
       }, state.data)),
       contentType: 'application/json',
       method: 'POST',
